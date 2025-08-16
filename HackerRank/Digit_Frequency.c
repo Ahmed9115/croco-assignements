@@ -8,7 +8,7 @@ int main() {
 char *STRING ;
 STRING = (char*)malloc(1024 * sizeof(char));
 fgets(STRING, 1024 , stdin);
-realloc(STRING,strlen(STRING));
+realloc(STRING,strlen(STRING) + 1);
 int frequency [10] = {0};
 
 

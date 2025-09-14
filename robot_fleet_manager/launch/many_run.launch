@@ -1,0 +1,9 @@
+<launch>
+
+<node name="run_task" pkg="robot_fleet_manager" type="sub.py" />
+<node name="run_cont" pkg="robot_fleet_manager" type="pub.py" output="screen" />
+
+
+</launch>
+
+

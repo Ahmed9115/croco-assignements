@@ -11,7 +11,7 @@ if __name__ == '__main__' :
 
     rospy.init_node("listener")
     
-    rospy.Subscriber("received_message" , custom , callback= talker)
+    rospy.Subscriber("custom_message" , custom , callback= talker)
 
     rospy.loginfo("message is received  !!!")
 

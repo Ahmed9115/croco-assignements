@@ -4,13 +4,9 @@ import rospy
 from robot_fleet_manager.msg import custom
 
 
-def talker():
+def talker(msg):
 
-  msg = custom()
-  msg.name ='Ahmed_robot'
-  msg.battery = 54
-  pub.publish(msg)
-
+  rospy.loginfo(msg)
 
 
 
@@ -23,10 +19,12 @@ if __name__ == '__main__' :
       pub = rospy.Publisher("custom_message" ,custom ,queue_size = 10)
       rate = rospy.Rate(10)
       
+      msg = custom()
+      msg.name ='Ahmed_robot'
+      msg.battery = 54
       
       while not rospy.is_shutdown():
-
-        talker()
+        pub.publish(msg)
         rate.sleep()
 
       
